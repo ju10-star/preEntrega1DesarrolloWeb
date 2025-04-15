@@ -1,70 +1,176 @@
-/* style.css */
-/* Estilos básicos para JoacoTours con fondo azul degradado */
-
-body {
+/* RESET BÁSICO */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* FUENTE Y BACKGROUND GENERAL */
+  body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to bottom, #005c97, #363795);
-    color: #ffffff;
+    color: #fffafa;
+    line-height: 1.6;
   }
   
-  /* Encabezado */
-  header {
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  h1 {
+  body {
     margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('assets/foto7.jpg');
+    background-size: cover;       /* cubre toda la pantalla */
+    background-position: center;  /* centra la imagen */
+    background-repeat: no-repeat; /* evita que se repita */
+    background-attachment: fixed; /* se queda fija al hacer scroll */
+    color: #fff; /* texto blanco si la imagen es oscura */
   }
   
-  /* Navegación */
+  /* ===================== HEADER ===================== */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
   nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 0.5rem;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
   
   nav a {
-    color: #ffffff;
+    color: rgb(255, 240, 240);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1rem;
   }
   
-  /* Secciones */
-  main {
-    padding: 2rem;
+  nav a:hover {
+    color: #000000;
   }
   
-  section {
-    margin-bottom: 2rem;
+  /* ===================== HERO ===================== */
+  .hero {
+    background-image: url("assets/joacotours.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.5); /* fallback si no carga */
+    color: #fff; /* asegúrate de que el texto sea visible */
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 2rem auto 0 auto; /* <- esto agrega espacio arriba */
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 8px;
+    border-radius: 12px;
+  }
+  
+  
+  .hero h2 {
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* ===================== SECCIONES ===================== */
+  section {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
   h2 {
-    color: #ffdd57;
+    font-size: 2rem;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 2rem;
   }
   
-  /* Galería */
-  #gallery img {
-    max-width: 300px;
+  /* ===================== SERVICIOS ===================== */
+  #services {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .service {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .service h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ===================== GALERÍA ===================== */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .gallery-grid img {
     width: 100%;
-    margin: 1rem 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
   }
   
-  /* Footer */
+  /* ===================== ABOUT ===================== */
+  #about p {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  /* ===================== FOOTER ===================== */
   footer {
     text-align: center;
-    padding: 1rem;
+    padding: 3rem 2rem;
     background-color: rgba(0, 0, 0, 0.3);
-    font-size: 0.9rem;
+    font-size: 1rem;
+    margin-top: 4rem;
   }
+  
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .hero h2 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    .service h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  
   
