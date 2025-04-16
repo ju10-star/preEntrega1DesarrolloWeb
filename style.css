@@ -59,7 +59,7 @@
   .logo-group {
     display: flex;
     align-items: center;
-    gap: 10px; /* Podés ajustar este valor para acercar más o menos los logos */
+    gap: 10px; 
   }
   
   .logo-group img {
@@ -85,11 +85,11 @@
   }
 
   .hero-text {
-    background-color: rgba(100, 100, 100, 0.5); /* gris translúcido */
+    background-color: rgba(100, 100, 100, 0.5); 
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* sombra externa */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* sombra al texto */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); 
     color: #000000;
   }
   
