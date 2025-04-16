@@ -17,11 +17,11 @@
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-image: url('assets/foto7.jpg');
-    background-size: cover;       /* cubre toda la pantalla */
-    background-position: center;  /* centra la imagen */
-    background-repeat: no-repeat; /* evita que se repita */
-    background-attachment: fixed; /* se queda fija al hacer scroll */
-    color: #fff; /* texto blanco si la imagen es oscura */
+    background-size: cover;       
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    color: #fff; 
   }
   
   /* ===================== HEADER ===================== */
@@ -56,22 +56,43 @@
     color: #000000;
   }
   
+  .logo-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Podés ajustar este valor para acercar más o menos los logos */
+  }
+  
+  .logo-group img {
+    height: 40px;
+  }
+  
+
+
   /* ===================== HERO ===================== */
   .hero {
-    background-image: url("assets/joacotours.jpg");
+    background-image: url("assets/image.ico");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.5); /* fallback si no carga */
-    color: #fff; /* asegúrate de que el texto sea visible */
+    color: #ffffff; 
     text-align: center;
+    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.5);
     padding: 4rem 2rem;
     max-width: 800px;
-    margin: 2rem auto 0 auto; /* <- esto agrega espacio arriba */
-    background-color: rgba(255, 255, 255, 0.1);
+    margin: 2rem auto 0 auto; 
     border-radius: 12px;
   }
+
+  .hero-text {
+    background-color: rgba(100, 100, 100, 0.5); /* gris translúcido */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* sombra externa */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* sombra al texto */
+    color: #000000;
+  }
+  
   
   
   .hero h2 {
@@ -82,7 +103,11 @@
   
   .hero p {
     font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgb(255, 255, 255);
   }
+  
+
+  
   
   /* ===================== SECCIONES ===================== */
   section {
@@ -97,6 +122,10 @@
     color: #000000;
     margin-bottom: 2rem;
   }
+
+
+  
+
   
   /* ===================== SERVICIOS ===================== */
   #services {
@@ -145,6 +174,7 @@
     font-size: 1rem;
     margin-top: 4rem;
   }
+    
   
   /* ===================== RESPONSIVE ===================== */
   @media (max-width: 768px) {
